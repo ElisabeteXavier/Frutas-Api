@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  database:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: teste123
+      MYSQL_DATABASE: hortifruti
+      MYSQL_USER: teste
+      MYSQL_PASSWORD: teste123
+      volumes:
+        db-volume:/var/lib/mysql
+
+volumes:
+  db-volume:
